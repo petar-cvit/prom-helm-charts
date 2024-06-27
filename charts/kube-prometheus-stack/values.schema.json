@@ -1,0 +1,49 @@
+{
+  "properties": {
+    "grafana": {
+      "type": "object",
+      "title": "Grafana",
+      "properties": {
+        "enabled": {
+          "title": "Enable grafana",
+          "type": "boolean"
+        },
+        "ingress": {
+          "type": "object",
+          "title": "Ingress",
+          "properties": {
+            "enabled": {
+              "title": "Enable ingress",
+              "type": "boolean"
+            },
+            "hosts": {
+              "type": "array",
+              "title": "Grafana domains",
+              "items": {
+                "type": "string"
+              }
+            },
+            "path": {
+              "type": "string",
+              "title": "Ingress path"
+            }
+          },
+          "order": [
+            "enabled",
+            "hosts",
+            "path"
+          ]
+        }
+      },
+      "order": [
+        "enabled",
+        "ingress"
+      ]
+    }
+  },
+  "order": [
+    "grafana"
+  ],
+  "title": "Values",
+  "type": "object"
+}
